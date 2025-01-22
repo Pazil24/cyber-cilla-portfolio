@@ -5,13 +5,43 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    z-index: 5;
+    background-color: #333;
+    color: #fff;
+}
+
 section {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     position: sticky;
-    background-color: #f5f5f5;
+    /* background-color: #f5f5f5; */
+}
+
+.section-one {
+    background-color: #0c0d0d;
+}
+
+.section-two {
+    background-color: #0c0d0d;
+}
+
+.section-three {
+    background-color: #0c0d0d;
+}
+
+.section-four {
+    background-color: #0c0d0d;
 }
 
 .container {
@@ -20,8 +50,6 @@ section {
     height: 95vh;
     padding: 3rem calc((100vw - 1300px) / 2);
     background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .column-left {
@@ -40,25 +68,31 @@ section {
     font-style: italic;
 }
 
-.image {
-    width: 100%;
-    height: 100%;
-    /* object-fit: cover;
-    border-radius: 10px; */
+.column-left p {
+    margin-bottom: 2rem;
+    font-size: 4rem;
+    line-height: 1.1;
+    color: #333;
 }
 
-@media screen and (max-width: 768px) {
-    .container {
-        grid-template-columns: 1fr;
-    }
+button {
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    /* transition: 0.3s; */
+}
 
-    .column-left {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 2rem;
-    }
-    
+button:hover {
+    background: #fff;
+    color: #333;
+}
+
+.text {
+    color: #fff;
 }
 
 .column-right {
@@ -67,3 +101,19 @@ section {
     align-items: center;
     padding: 2rem;
 }
+
+.image {
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    max-height: 700px;
+    /* object-fit: cover;
+    border-radius: 10px; */
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
